@@ -1,0 +1,14 @@
+<h1>&nbsp;</h1><table >
+<tr>
+	<th>NAME</th>
+	<th>ADDRESS</th>
+	<th>CITY</th>
+	<th>PHONE</th>
+</tr>
+<tr>
+<td><%= @view.name%></td>
+<td><%= @view.address%></td>
+<td><%= @view.city%></td>
+<td><%= @view.phone%></td></tr>
+</table></br>
+<td><%= link_to("Back",{:controller=>'dept',:action=>"show",:id=>@view.id})%></td>

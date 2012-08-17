@@ -1,0 +1,12 @@
+<h1>&nbsp;</h1><table>
+<%= form_for :sav ,:url=>{:controller=>'employee',:action=>"create",:id=>@f.id} do|s|%>
+<%#= s.error_messages %>
+<tr><td>NAME</td>
+	<td><%=s.text_field :name%></td></tr>
+<tr><td>ADDRESS</td><td><%=s.text_field :address%></td>
+<tr><td>CITY</td><td><%=s.text_field :city%></td>
+<tr><td>PHONE</td><td><%=s.text_field :phone%></td>
+</table></br>
+<%= s.submit("submit")%>
+<%end%>&nbsp;
+<%= link_to("Back to Departments",{:controller=>'dept',:action=>"show"})%>

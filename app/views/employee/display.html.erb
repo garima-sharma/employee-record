@@ -1,0 +1,25 @@
+<h1>&nbsp;</h1><table>
+<tr>
+	<th>NAME</th>
+	<th>ADDRESS</th>
+	<th>CITY</th>
+	<th>PHONE</th>
+	 <%=flash[:notice]%>
+</tr>
+<%@display.each do |i|%>
+<tr>
+
+<td><%= i.name%></td>
+<td><%= i.address%></td>
+<td><%= i.city%></td>
+<td><%= i.phone%></td>
+<td><%= link_to("View",{:action=>"view" ,:id=>i.id})%></td>
+<td><%= link_to("Delete",{:action=>"delete" ,:id=>i.id})%></td>
+<td><%= link_to("Edit",{:action=>"edit" ,:id=>i.id})%></td>
+</tr>
+
+
+<%end%>
+
+</table></br>
+<%= link_to("Go Back",{:controller=>'dept',:action=>'show',})%>

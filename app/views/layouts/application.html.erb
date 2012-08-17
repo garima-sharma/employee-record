@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee</title>
+  <%= stylesheet_link_tag    "application","/stylesheets/style.css" ,:media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Employee record management</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!--[if IE 6]>
+	<script type="text/javascript" src="unitpngfix.js"></script>
+<![endif]--> 
+<style type="text/css">
+<!--
+.style1 {
+	font-size: large;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.style2 {font-size: xx-large}
+-->
+</style>
+</head>
+<body>
+<div class="wrap">
+
+    	<div class="logo">
+    	  <h1><a class="style1 style2">EMPLOYEE RECORD MANAGEMENT </a></h1>
+    	</div>
+        
+        <div id="menu">
+            <div id="user_nav">
+            <% if admin_signed_in? %>
+            Signed in as <%= current_admin.email %>. Not you?
+            <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
+            <% else %>
+            <%= link_to "Sign up", new_admin_registration_path %> or <%= link_to "Sign in", new_admin_session_path %>
+            <% end %>
+            </div>
+        </div>
+           
+    <div class="user_icon"><%=image_tag  "/images/user.png" %></div>
+ <body>
+ <%= yield %>
+</body>
+    <!--End of welcome_block-->
+     <div class="clear">
+    </div><!--End of main_content-->
+
+    
+</div><!--End of wrap-->
+
+<div class="footer">
+	<div class="footer_content">
+      
+	</div>
+</div><!--End of footer-->
+
+
+
+</body>
+
+
+
+</html>

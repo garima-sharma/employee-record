@@ -1,0 +1,18 @@
+<h3>
+<table border="1">
+<tr>
+	<th>DEPARTMENT NAME</th>
+	<th>MANAGER NAME</th>
+</tr>
+<% @show.each do |i|%>
+<tr>
+<td><%= i.deptName%></td>
+<td><%= i.managerName%></td>
+<td><%= link_to("View",{:action=>"view" ,:id=>i.id})%></td>
+<td><%= link_to("Delete",{:action=>"delete" ,:id=>i.id})%></td>
+<td><%= link_to("Edit",{:action=>"edit" ,:id=>i.id})%></td>
+<td><%= link_to("Add Employee",{:controller=>'employee',:action=>"index" ,:id=>i.id})%></td>
+<td><%= link_to("Display Employee",{:controller=>'employee',:action=>"display" ,:id=>i.id})%></td>
+<%end%>
+</table></br>
+<%= link_to("New",{:action=>'index'})%></h3>

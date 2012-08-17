@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  deptName: MyString
+  managerName: MyString
+
+two:
+  deptName: MyString
+  managerName: MyString

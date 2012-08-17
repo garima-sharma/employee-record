@@ -1,0 +1,16 @@
+<h1>&nbsp;</h1><h1>Update Details!</h1></br></br></br>
+<table>
+<tr>
+	<th>NAME</th>
+	<th>ADDRESS</th>
+	<th>CITY</th>
+	<th>PHONE</th>
+</tr>
+<tr><%= form_for @edit,:url=>{:action=>:update, :id=> @edit.id}  do |a|%>
+<td><%=a.text_field :name%></td>
+<td><%=a.text_field :address%></td>
+<td><%=a.text_field :city%></td>
+<td><%=a.text_field :phone%></td>
+</table></br>
+<%= a.submit("submit")%>  
+<%end%>

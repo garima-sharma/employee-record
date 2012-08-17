@@ -1,0 +1,11 @@
+<h4 a>&nbsp;</h4 a>
+<table border="1">
+<%= form_for :sav ,:url=>{:action=>"save"} do|s|%>
+
+<tr><td>DEPARTMENT NAME</td>
+	<td><%=s.text_field :deptName%></td></tr>
+<tr><td>MANAGER NAME</td><td><%=s.text_field :managerName%></td>
+</table></br>
+<%= s.submit("submit")%>
+<%end%>
+

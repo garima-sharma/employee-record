@@ -1,0 +1,2 @@
+module DeptHelper
+end

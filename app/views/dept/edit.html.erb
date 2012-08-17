@@ -1,0 +1,11 @@
+<h1>&nbsp;</h1><table border="1">
+<tr>
+	<th>DEPARTMENT NAME</th>
+	<th>MANAGER NAME</th>
+</tr>
+<tr><%= form_for @edit,:url=>{:action=>:update, :id=> @edit.id}  do |a|%>
+<td><%=a.text_field :deptName%></td>
+<td><%=a.text_field :managerName%></td>
+</table></br>
+<%= a.submit("submit")%>  
+<%end%>
